@@ -48,6 +48,12 @@
 #' @rdname BitPR
 #'
 #' @export
+#'
+#'
+#''
+#'
+#'
+#'
 dBitPR <- function(x, a, b, rho, v)
 {
   stopifnot(x > 0, rho < 1 && rho > -1, v %% 1 == 0 && v >= 0)
@@ -62,7 +68,8 @@ dBitPR <- function(x, a, b, rho, v)
   Survival00 = 1 - stats::pt(-a, v) - stats::pt(-b, v) + mvtnorm::pmvt(lower, upper, delta, v, corr)
   s = Survival00[1]
   #Pr(x>0,y>0)
-  J_1 <- function(a, b, c, alpha){a^(-1) * c^(1 - alpha) * beta(2, 2 * alpha -2) * BMS::f21hyper(1, alpha - 1, alpha + 1 / 2, 1 - b^2 / (4 * a * c))}
+  J_1 <- function(a, b, c, alpha){a^(-1) * c^(1 - alpha) * beta(2, 2 * alpha -2) *
+      f21hyper(1, alpha - 1, alpha + 1 / 2, 1 - b^2 / (4 * a * c))}
   # J_1(a,b,c,alpha)
   A = -2 * a + 2 * rho * b
   B = -2 * b + 2 * rho * a

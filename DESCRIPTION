@@ -2,7 +2,7 @@ Package: PosRatioDist
 Type: Package
 Title: Quotient of Random Variables Conditioned to the Positive
         Quadrant
-Version: 1.0.1
+Version: 1.1.1
 Authors@R: 
   c(person(given = "Yuancheng",
            family = "Si",
@@ -20,12 +20,12 @@ Description: Computes the exact probability density function of X/Y conditioned 
 Depends: R (>= 3.5.0)
 License: GPL (>= 2)
 Encoding: UTF-8
-Imports: BMS, mvtnorm, stats, NORMT3
+Imports: mvtnorm, stats, NORMT3
 NeedsCompilation: no
 RoxygenNote: 7.1.1
-Packaged: 2021-07-13 14:24:11 UTC; siyua
+Packaged: 2022-04-27 08:10:27 UTC; siyua
 Author: Yuancheng Si [aut, cre] (<https://orcid.org/0000-0003-0944-0013>),
   Saralees Nadarajah [aut],
   Xiaodong Song [ctb]
 Repository: CRAN
-Date/Publication: 2021-07-13 16:30:05 UTC
+Date/Publication: 2022-04-27 11:10:06 UTC

@@ -37,6 +37,12 @@
 #' @rdname dBilomaxPR
 #'
 #' @export
+#'
+#'
+#'
+#'
+#'
+#'
 dBilomaxPR <- function(x, a, b, c, alpha, beta, theta)
 {
   stopifnot(x > 0, alpha >0, beta > 0, theta >= 0 && theta <= (c + 1) * alpha * beta)
@@ -49,19 +55,19 @@ dBilomaxPR <- function(x, a, b, c, alpha, beta, theta)
   J_1 <- function(a, b, c, alpha)
   {
     stopifnot(a > 0,b^2 < 4 * a * c,-1 < 1 && 1 < 2 * alpha - 1)
-    a^(-1) * c^(1 - alpha) * beta(2, 2 * alpha -2) * BMS::f21hyper(1, alpha - 1, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
+    a^(-1) * c^(1 - alpha) * beta(2, 2 * alpha -2) * f21hyper(1, alpha - 1, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
   }
   # J_1(a,b,c,alpha)
   J_2 <- function(a, b, c, alpha)
   {
     stopifnot(a > 0,b^2 < 4 * a * c,-1 < 2 && 2 < 2 * alpha - 1)
-    a^(-3 / 2) * c^(3 / 2 - alpha) * beta(3, 2 * alpha - 3) * BMS::f21hyper(3 / 2, alpha - 3 / 2, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
+    a^(-3 / 2) * c^(3 / 2 - alpha) * beta(3, 2 * alpha - 3) * f21hyper(3 / 2, alpha - 3 / 2, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
   }
   # J_2(a,b,c,alpha)
   J_3 <- function(a, b, c, alpha)
   {
     stopifnot(a > 0,b^2 < 4 * a * c,-1 < 3 && 3 < 2 * alpha - 1)
-    a^(-2) * c^(2 - alpha) * beta(4, 2 * alpha - 4) * BMS::f21hyper(2, alpha - 2, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
+    a^(-2) * c^(2 - alpha) * beta(4, 2 * alpha - 4) * f21hyper(2, alpha - 2, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
   }
   # J_3(a,b,c,alpha)
 

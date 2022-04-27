@@ -42,9 +42,13 @@
 #'
 #'
 #'
+
+#'
+#'
 #' @rdname BicauchyPR
 #'
 #' @export
+#'
 dBicauchyPR <- function(x, a, b)
 {
   stopifnot(x > 0)
@@ -53,7 +57,7 @@ dBicauchyPR <- function(x, a, b)
   J_1 <- function(a, b, c, alpha)
   {
     stopifnot(a > 0,b^2 < 4 * a * c,-1 < 1 && 1 < 2 * alpha - 1)
-    a^(-1) * c^(1 - alpha) * beta(2, 2 * alpha -2) * BMS::f21hyper(1, alpha - 1, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
+    a^(-1) * c^(1 - alpha) * beta(2, 2 * alpha -2) * f21hyper(1, alpha - 1, alpha + 1 / 2, 1 - b^2 / (4 * a * c))
   }
   # J_1(a,b,c,alpha)
   A = -2 * a
