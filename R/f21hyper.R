@@ -19,7 +19,8 @@
 #'
 #'
 #' @details
-#' The function \code{f21hyper} complements the analysis of the 'hyper-g prior' introduced by Liang et al. (2008)..
+#' The function \code{f21hyper} complements the analysis of the 'hyper-g prior' introduced by Liang et al. (2008).\cr
+#' For parameter values, compare cf. \url{https://en.wikipedia.org/wiki/Hypergeometric_function#The_series_2F1}.
 #'
 #' @returns the value of the Gaussian hypergeometric function \eqn{ F(a,b,c,z)
 #' @returns Invalid arguments will return an error message.

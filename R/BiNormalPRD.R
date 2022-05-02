@@ -59,7 +59,7 @@ dBinormalPR <- function(x, a, b, rho)
   Survival00 = 1 - stats::pnorm(-a) - stats::pnorm(-b) + mvtnorm::pmvnorm(lower, upper, mean, corr)
   s = Survival00[1]
   #Pr(x>0,y>0)
-  I_1 <- function(a , b){- sqrt(pi) * b / (4 * a^(3 / 2)) * exp(b^2 / (4 * a)) * Re(NORMT3::erfc(b / (2 * sqrt(a)))) + 1  / (2 * a)}
+  I_1 <- function(a , b){- sqrt(pi) * b / (4 * a^(3 / 2)) * exp(b^2 / (4 * a)) * 2 * stats::pnorm(-sqrt(2) * (b / (2 * sqrt(a))) + 1  / (2 * a))}
   # I_1(a,b)
   A = -2 * a + 2 * rho * b
   B = -2 * b + 2 * rho * a

@@ -80,7 +80,7 @@
 I_1 <- function(a , b)
 {
   stopifnot(a > 0)
-  - sqrt(pi) * b / (4 * a^(3 / 2)) * exp(b^2 / (4 * a)) * Re(NORMT3::erfc(b / (2 * sqrt(a)))) + 1  / (2 * a)
+  - sqrt(pi) * b / (4 * a^(3 / 2)) * exp(b^2 / (4 * a)) * 2 * stats::pnorm(-sqrt(2) * (b / (2 * sqrt(a)) + 1  / (2 * a)))
 }
 # I_1(a,b)
 
@@ -90,7 +90,7 @@ I_1 <- function(a , b)
 I_2 <- function(a , b)
 {
   stopifnot(a > 0)
-   sqrt(pi) * b / (4 * a^(3 / 2)) * exp(b^2 / (4 * a)) * Re(NORMT3::erfc(b / (2 * sqrt(a)))) + sqrt(pi) * b^2 / (8 * a^(5 / 2)) * exp(b^2 / (4 * a)) * Re(NORMT3::erfc(b / (2 * sqrt(a)))) - b / (4 * a^2)
+   sqrt(pi) * b / (4 * a^(3 / 2)) * exp(b^2 / (4 * a)) * 2 * stats::pnorm(-sqrt(2) * (b / (2 * sqrt(a)))) + sqrt(pi) * b^2 / (8 * a^(5 / 2)) * exp(b^2 / (4 * a)) * 2 * stats::pnorm(-sqrt(2) *(b / (2 * sqrt(a)))) - b / (4 * a^2)
 }
 # I_2(a,b)
 
@@ -100,7 +100,7 @@ I_2 <- function(a , b)
 I_3 <- function(a , b)
 {
   stopifnot(a > 0)
-  -3 * sqrt(pi) * b / (8 * a^(5 / 2)) * exp(b^2 / (4 * a)) * Re(NORMT3::erfc(b / (2 * sqrt(a)))) - sqrt(pi) * b^3 / (16 * a^(7 / 2)) * exp(b^2 / (4 * a)) * Re(NORMT3::erfc(b / (2 * sqrt(a)))) + 1 / (2 * a^2) + b^2 / (8 * a^3)
+  -3 * sqrt(pi) * b / (8 * a^(5 / 2)) * exp(b^2 / (4 * a)) * 2 * stats::pnorm(-sqrt(2) *(b / (2 * sqrt(a)))) - sqrt(pi) * b^3 / (16 * a^(7 / 2)) * exp(b^2 / (4 * a)) * 2 * stats::pnorm(-sqrt(2) *(b / (2 * sqrt(a)))) + 1 / (2 * a^2) + b^2 / (8 * a^3)
 }
 # I_3(a,b)
 

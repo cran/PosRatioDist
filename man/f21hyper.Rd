@@ -24,7 +24,8 @@ Invalid arguments will return an error message.
 Computes the value of a Gaussian hypergeometric function \eqn{ F(a,b,c,z) } for \eqn{-1 \leq z \leq 1} and \eqn{a,b,c \geq 0}
 }
 \details{
-The function \code{f21hyper} complements the analysis of the 'hyper-g prior' introduced by Liang et al. (2008)..
+The function \code{f21hyper} complements the analysis of the 'hyper-g prior' introduced by Liang et al. (2008).\cr
+For parameter values, compare cf. \url{https://en.wikipedia.org/wiki/Hypergeometric_function#The_series_2F1}.
 }
 \examples{
 f21hyper(30,1,20,.8) #returns about 165.8197
